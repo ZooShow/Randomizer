@@ -5,12 +5,6 @@
 #include <omp.h>
 #include <atomic>
 
-#define  STEPS 100000000
-#define CACHE_LINE 64u
-#define MIN 1
-#define MAX 300
-#define SEED 100
-
 using namespace std;
 
 typedef double (*randomize_function) (unsigned, unsigned*, size_t, unsigned, unsigned);
@@ -20,19 +14,6 @@ typedef struct experiment_result {
     double result;
     double time_ms;
 } experiment_result;
-
-experiment_result run_experiment_random(R_t R) {
-    size_t len = 100000;
-    unsigned arr[len];
-    unsigned seed = SEED;
-    double t0 = omp_get_wtime();
-    double Res = R((unsigned *)&arr, len);
-    double t1 = omp_get_wtime();
-    return {
-            Res,
-            t1 - t0
-    };
-}
 
 unsigned num_threads = std::thread::hardware_concurrency();
 
@@ -132,7 +113,7 @@ double RandomizeArrayShared(unsigned seed, unsigned* V, size_t n, unsigned min, 
 }
 
 experiment_result RandomizerExperiment (randomize_function f) {
-    size_t ArrayLength = 500000;
+    size_t ArrayLength = 500500;
     unsigned Array[ArrayLength];
     unsigned seed = 20;
 
