@@ -1,0 +1,4 @@
+C:\Users\zoosh\.CLion2019.3\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=C:/cygwin64/bin/c++.exe -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/zoosh/CLionProjects/Randomizer
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /cygdrive/c/Users/zoosh/CLionProjects/Randomizer/cmake-build-debug

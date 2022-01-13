@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/zoosh/CLionProjects/Randomizer/main.cpp
+iostream
+-
+thread
+-
+mutex
+-
+vector
+-
+omp.h
+-
+atomic
+-
+

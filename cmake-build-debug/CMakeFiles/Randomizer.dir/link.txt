@@ -1,0 +1,1 @@
+C:/cygwin64/bin/c++.exe  -std=c++11 -fopenmp -g  -Wl,--enable-auto-import CMakeFiles/Randomizer.dir/main.cpp.o  -o Randomizer.exe -Wl,--out-implib,libRandomizer.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
